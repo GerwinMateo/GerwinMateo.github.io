@@ -8,15 +8,14 @@ let padding = 10;
 let imageSize = 300; 
 
 const sadImages = [
-    'images/sad/IMG_9241.jpg',
-    'images/sad/IMG_9242.jpg',
-    'images/sad/IMG_9243.jpg',
-    'images/sad/IMG_9244.jpg',
-    'images/sad/IMG_9245.jpg'
-    
+    '/images/sad/IMG_9241.jpg',
+    '/images/sad/IMG_9242.jpg',
+    '/images/sad/IMG_9243.jpg',
+    '/images/sad/IMG_9244.jpg',
+    '/images/sad/IMG_9245.jpg'
 ];
 
-const happyImage = 'images/happy/IMG_1331.jpg';
+const happyImage = '/images/happy/IMG_1331.jpg';
 
 noBtn.addEventListener('click', () => {
     fontSize += 0.4;
