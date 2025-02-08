@@ -7,28 +7,29 @@ let fontSize = 1.2;
 let padding = 10;
 let imageSize = 300; 
 
-const sadImages = [
-    '/images/sad/IMG_9241.jpg',
-    '/images/sad/IMG_9242.jpg',
-    '/images/sad/IMG_9243.jpg',
-    '/images/sad/IMG_9244.jpg',
-    '/images/sad/IMG_9245.jpg'
-];
+function changeToHappyGif() {
+    mainImage.innerHTML = '';
+    
+    mainImage.innerHTML = `
+        <div class="tenor-gif-embed" data-postid="9406698208260770694" data-share-method="host" data-aspect-ratio="1.0375" data-width="100%">
+            <a href="https://tenor.com/view/bubu-dancing-dance-happy-dance-bubu-cat-gif-9406698208260770694">Bubu Dancing Dance GIF</a>
+        </div>
+    `;
 
-const happyImage = '/images/happy/IMG_1331.jpg';
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://tenor.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+}
 
 noBtn.addEventListener('click', () => {
     fontSize += 0.4;
     padding += 5;
-    imageSize += 10; // Increase image size
+    imageSize += 10;
     
     yesBtn.style.fontSize = `${fontSize}rem`;
     yesBtn.style.padding = `${padding}px ${padding * 3}px`;
-    mainImage.style.width = `${imageSize}px`;
-    mainImage.style.height = `${imageSize}px`;
-    
-    const randomSadImage = sadImages[Math.floor(Math.random() * sadImages.length)];
-    mainImage.src = randomSadImage;
 });
 
 yesBtn.addEventListener('click', () => {
@@ -36,10 +37,9 @@ yesBtn.addEventListener('click', () => {
     noBtn.style.display = 'none';
     yesBtn.style.display = 'none';
     
-    // Change to the happy image
-    mainImage.src = happyImage;
+    // Change to happy Tenor GIF
+    changeToHappyGif();
     
- 
     setInterval(() => {
         createHeart();
     }, 300);

@@ -98,4 +98,14 @@ h1 {
     border-radius: 15px;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
+}
+
+.tenor-gif-embed {
+    width: 300px !important;
+    height: 300px !important;
+    margin: 0 auto 1rem auto;
+}
+
+.tenor-gif-embed iframe {
+    border-radius: 15px;
 } 
